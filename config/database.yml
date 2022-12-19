@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: RenderTest_production
-  username: RenderTest
-  password: <%= ENV["RENDERTEST_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  database: render_test_production
+  username: render_test
+  password: <%= ENV["DATABASE_PASSWORD"] %>
